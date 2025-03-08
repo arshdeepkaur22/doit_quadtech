@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "./TaskSlice"
+import { login } from "./TaskSlice";
+import logo from "/logo.png";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -14,7 +15,7 @@ const Login = () => {
       setError("Please enter your name");
       return;
     }
-    
+
     dispatch(login(username));
   };
 
@@ -22,13 +23,23 @@ const Login = () => {
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
       <div className="w-full max-w-md p-4 sm:p-8 mx-4 rounded-lg shadow-xl backdrop-filter backdrop-blur-lg bg-white/90 dark:bg-white/10 border border-gray-200 dark:border-white/20">
         <div className="text-center mb-6 sm:mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white">Task Manager</h1>
-          <p className="text-gray-600 dark:text-white/70 mt-2">Sign in to manage your tasks</p>
+          <div className="flex gap-2">
+            <img src={logo}></img>
+            <p className="font-bold text-[#3F9142] dark:text-[#347136] font-sen text-xl sm:text-2xl">
+              DoIt
+            </p>
+          </div>
+          <p className="text-gray-600 dark:text-white/70 mt-2">
+            Sign in to manage your tasks
+          </p>
         </div>
 
         <form onSubmit={handleSubmit}>
           <div className="mb-6">
-            <label htmlFor="username" className="block text-gray-700 dark:text-white text-sm font-medium mb-2">
+            <label
+              htmlFor="username"
+              className="block text-gray-700 dark:text-white text-sm font-medium mb-2"
+            >
               Your Name
             </label>
             <input
@@ -39,7 +50,11 @@ const Login = () => {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
-            {error && <p className="mt-2 text-red-500 dark:text-red-300 text-sm">{error}</p>}
+            {error && (
+              <p className="mt-2 text-red-500 dark:text-red-300 text-sm">
+                {error}
+              </p>
+            )}
           </div>
 
           <button
