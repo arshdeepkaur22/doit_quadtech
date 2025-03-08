@@ -1,0 +1,109 @@
+/* Themepicker.css */
+.react-datepicker {
+    width: 100%;
+    font-family: "Sen", sans-serif;
+    background-color: #1e293b !important; /* Darker background for better contrast */
+    border: 1px solid #4b5563 !important;
+    color: white !important;
+    border-radius: 8px !important;
+  }
+  
+  .react-datepicker__month-container {
+    width: 100%;
+    padding: 8px;
+  }
+  
+  /* Make day cells larger and more spaced */
+  .react-datepicker__day {
+    color: white !important;
+    margin: 4px !important;
+    width: 32px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    border-radius: 50% !important;
+  }
+  
+  .react-datepicker__day:hover {
+    background-color: #4b5563 !important;
+  }
+  
+  .react-datepicker__day--selected {
+    background-color: #347136 !important;
+    font-weight: bold !important;
+  }
+  
+  /* Header styling */
+  .react-datepicker__header {
+    background-color: #1e293b !important; /* Match container background */
+    color: white !important;
+    border-bottom: 1px solid #4b5563 !important;
+    padding-top: 12px !important;
+    padding-bottom: 8px !important;
+  }
+  
+  .react-datepicker__current-month {
+    color: white !important;
+    font-weight: bold !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .react-datepicker__day-name {
+    color: #9ca3af !important; /* Lighter gray for day names */
+    margin: 4px !important;
+    width: 32px !important;
+  }
+  
+  /* Time container fixes */
+  .react-datepicker__time-container {
+    width: 100% !important;
+    border-left: none !important;
+  }
+  
+  .react-datepicker__time {
+    background-color: #1e293b !important;
+  }
+  
+  .react-datepicker__time-box {
+    width: 100% !important;
+  }
+  
+  .react-datepicker__time-list-item {
+    color: white !important;
+    height: 32px !important;
+    line-height: 32px !important;
+  }
+  
+  .react-datepicker__time-list-item:hover {
+    background-color: #4b5563 !important;
+  }
+  
+  .react-datepicker__time-list-item--selected {
+    background-color: #347136 !important;
+  }
+  
+  /* Navigation styling */
+  .react-datepicker__navigation {
+    top: 12px !important;
+  }
+  
+  /* Button styling */
+  .set-reminder-button, 
+  .add-to-google-button {
+    width: 100%;
+    padding: 8px 0;
+    margin-top: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .set-reminder-button {
+    background-color: #347136;
+    color: white;
+  }
+  
+  .add-to-google-button {
+    background-color: #4285F4;
+    color: white;
+  }
